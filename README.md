@@ -1,122 +1,101 @@
-🌫️ AirAware: Machine Learning–Based Air Quality Monitoring & Prediction System
+# 🌫️ AirAware: Machine Learning–Based Air Quality Monitoring & Prediction System  
+### Business Analytics Project – Team 19
 
 AirAware is an end-to-end machine learning project designed to monitor, classify, and forecast Air Quality Index (AQI) across Indian cities. The system integrates ML prediction, time-series forecasting, geospatial visualization, and an interactive user interface to provide real-time and future insights into air pollution.
 
-🚀 Features
+---
 
-AQI Prediction Module
-Predicts numerical AQI values and classifies them into categories (Good, Moderate, Poor, etc.) using Random Forest.
+## 🚀 Features
+- **AQI Prediction Module** using Random Forest  
+- **Time-Series Forecasting** with ARIMA  
+- **Interactive Geospatial AQI Maps** (Folium)  
+- **Gradio Dashboard** for real-time predictions and visualization  
+- **Voice Output** using gTTS for accessibility  
 
-Time-Series Forecasting
-ARIMA-based forecasting to predict future pollutant trends.
+---
 
-Geospatial AQI Mapping
-Interactive heatmaps and state-wise AQI color maps using Folium.
-
-Interactive Dashboard
-User-friendly Gradio UI to input pollutant values, view results, maps, and forecasts.
-
-Voice Output
-AQI prediction and category read aloud using Google Text-to-Speech (gTTS).
-
-📁 Project Structure
-├── data/                          # Raw and preprocessed datasets
+## 📁 Project Structure
+├── data/
 ├── notebooks/
-│   ├── air_quality_prediction.ipynb
-│   └── finalhack.ipynb
-├── models/                        # Saved ML models (Random Forest, ARIMA)
-├── app/                           # Gradio UI files
-├── maps/                          # Generated heatmaps and AQI maps
-├── README.md                      # Project documentation
-└── requirements.txt               # Dependencies
+│ ├── air_quality_prediction.ipynb
+│ └── finalhack.ipynb
+├── models/
+├── app/
+├── maps/
+├── README.md
+└── requirements.txt
+---
 
-🧠 Models Used
-🔹 Regression Models (AQI Value Prediction)
+## 🧠 Models Used
 
-Linear Regression
+### Regression Models  
+- Linear Regression  
+- Decision Tree Regressor  
+- **Random Forest Regressor (Best Model)**  
+  - RMSE (Test): 1.15  
+  - R² (Test): 0.99989  
 
-Decision Tree Regressor
+### Classification Models  
+- Logistic Regression  
+- Decision Tree Classifier  
+- **Random Forest Classifier (Best Model)**  
+  - Accuracy: 99.98%  
+  - Kappa Score: 0.99975  
+- KNN Classifier  
 
-Random Forest Regressor (Best)
+### Forecasting  
+- ARIMA (1,1,1) for pollutant trend prediction  
 
-RMSE (Test): 1.15
+---
 
-R² (Test): 0.99989
+## 📊 Business Insights
+- PM10 and PM2.5 are the top contributors to AQI deterioration  
+- Industrial zones show consistently higher pollution  
+- Forecasting enables proactive planning  
+- Supports policy framing for smart cities  
+- Highlights gaps in monitoring infrastructure  
+- Useful for health advisories and risk management  
+- Helps track industrial emission patterns  
 
-🔹 Classification Models (AQI Category Prediction)
+---
 
-Logistic Regression
+## 🖥️ Tech Stack
+- Python  
+- Scikit-learn, Statsmodels  
+- Matplotlib, Seaborn, Folium  
+- Gradio  
+- gTTS  
+- Pandas, NumPy  
 
-Decision Tree Classifier
+---
 
-Random Forest Classifier (Best)
+## ⚙️ How to Run
 
-Accuracy: 99.98%
 
-Kappa Score: 0.99975
+### Run Jupyter Notebook
 
-K-Nearest Neighbours (KNN)
+### Launch Gradio App
 
-🔹 Forecasting
+---
 
-ARIMA (1,1,1) model for pollutant-level prediction
+## 🌍 Dataset
+- Kaggle – Indian Air Quality Dataset (2015–2020)
 
-📊 Business Insights
+---
 
-PM10 and PM2.5 are the major pollution drivers.
+## 📝 Conclusion
+AirAware demonstrates how analytics, machine learning, forecasting, and geospatial mapping can support environmental monitoring, public awareness, and sustainable city planning.
 
-Industrial areas show consistently higher pollutant levels.
+---
 
-Forecasting enables early detection of pollution spikes.
+## 🤝 Contributors – Team 19
 
-Supports data-driven policymaking for smart cities.
+| Sl. No. | Reg. No.        | Name of the Student   |
+|---------|------------------|------------------------|
+| 1       | BL.EN.U4CSE22253 | Saurabh Mahuli         |
+| 2       | BL.EN.U4CSE22254 | Shail Garg             |
+| 3       | BL.EN.U4CSE22259 | Tarunya G              |
+| 4       | BL.EN.U4CSE22267 | Gayatri Yerukola       |
 
-Identifies monitoring infrastructure gaps across states.
+---
 
-Helpful for public awareness with AQI + health advisory.
-
-Useful for industrial compliance and environmental audits.
-
-🖥️ Tech Stack
-
-Python
-
-Machine Learning: Scikit-learn
-
-Time-Series Modeling: Statsmodels (ARIMA)
-
-Visualization: Matplotlib, Seaborn, Folium
-
-Web UI: Gradio
-
-Voice Engine: gTTS
-
-Data Handling: Pandas, NumPy
-
-⚙️ How to Run
-1️⃣ Install Dependencies
-pip install -r requirements.txt
-
-2️⃣ Run the Prediction/Forecasting Notebooks
-jupyter notebook air_quality_prediction.ipynb
-
-3️⃣ Launch the Gradio App
-python app/main.py
-
-🌍 Dataset
-
-Kaggle: Indian Air Quality Dataset (2015–2020)
-Includes SO₂, NO₂, PM10, PM2.5, CO, O₃ measurements across Indian cities.
-
-📝 Conclusion
-
-AirAware demonstrates how machine learning, time-series analytics, and geospatial visualization can work together to build a powerful decision-support system for environmental monitoring and sustainable urban planning.
-
-🤝 Contributors
-
-Team 19
-C2 Batch 
-BL.EN.U4CSE22253, Saurab Mahuli
-BL.EN.U4CSE22254, Shail Garg
-BL.EN.U4CSE22259, Tarunya G
-BL.EN.U4CSE22267, Gayatri Yerukola
